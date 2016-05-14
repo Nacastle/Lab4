@@ -159,19 +159,19 @@ bool control(int* adivinar, int* intento, int dimension){
 
 bool game(int* adivinar, int dimension){
 	bool gane=false;
-	char intento[dimension]; 
-	int numeroIntento[dimension]; 
+	char intento[dimension];
+	int numeroIntento[dimension];
 	int numIntentos=0;
 	int maxIntentos=5;
 
-	while(!gane && numIntentos < maxIntentos) { 
-		cout << endl << "Ingrese el numero de " << dimension << " cifras." << endl; 
-		cout << "Intento nro: " << ++numIntentos << " de " << maxIntentos << endl; 
-		cin >> intento; 
-		if(strlen(intento) == dimension) { 
-			convertiraCadena(intento, numeroIntento, dimension); 
-			gane = control(adivinar, numeroIntento, dimension); 
+	while(!gane && numIntentos < maxIntentos) {
+		cout << endl << "Ingrese el numero de " << dimension << " cifras." << endl;
+		cout << "Intento nro: " << ++numIntentos << " de " << maxIntentos << endl;
+		cin >> intento;
+		if(strlen(intento) == dimension) {
+			convertiraCadena(intento, numeroIntento, dimension);
+			gane = control(adivinar, numeroIntento, dimension);
 		}
 	}
-	return gane; 
+	return gane;
 }
